@@ -2,7 +2,7 @@
 
 A one-page map of everything that grows around a single NFT on [teia.art](https://teia.art) — from minting and rights through discovery, connection, and community governance.
 
-**→ [View it live](https://pixelsushirobot.github.io/teia-ecosystem/)**
+**→ [View it live](https://pixelsushirobot.github.io/Teia-Ecosystem/)**
 
 ## What it is
 
@@ -22,21 +22,6 @@ Each feature is tagged with the roles it serves — `#artist`, `#collector`, `#c
 - **Light / dark / system theme toggle** — top-right of the header. Defaults to following your OS; your choice persists via `localStorage`.
 - **Responsive** — two-column card grid collapses to one column on narrow screens.
 - **Print-friendly** — a print stylesheet keeps cards and stages from breaking across pages; the theme toggle is hidden when printing.
-
-## Running it
-
-It's a static page — open `index.html` in any browser, or host it anywhere that serves static files.
-
-### GitHub Pages
-
-1. Put `index.html` at the repo root.
-2. **Settings → Pages → Build and deployment → Source: Deploy from a branch**, select `main` and `/ (root)`.
-3. The site goes live at `https://<username>.github.io/<repo>/`.
-
-## Credits
-
-- Color system: [Reasonable Colors](https://www.reasonable.work/colors/) by Matthew Howell — used for the accessible role-tag palette.
-- Theme-toggle pattern adapted from [fit.gif](https://github.com/PixelSushiRobot/fit.gif).
 
 ## License
 
