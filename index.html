@@ -14,13 +14,13 @@
 <meta name="theme-color" content="#0c0c0d" media="(prefers-color-scheme: dark)">
 
 <!-- Canonical — update to your Pages URL -->
-<link rel="canonical" href="https://pixelsushirobot.github.io/teia-ecosystem/">
+<link rel="canonical" href="https://pixelsushirobot.github.io/Teia-Ecosystem/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Teia, The Ecosystem Around an NFT">
 <meta property="og:description" content="A map of everything that grows around a single NFT on teia.art — from minting and rights to discovery, connection, and community governance.">
-<meta property="og:url" content="https://pixelsushirobot.github.io/teia-ecosystem/">
+<meta property="og:url" content="https://pixelsushirobot.github.io/Teia-Ecosystem/">
 <meta property="og:site_name" content="Teia Ecosystem">
 
 <!-- Twitter / X card -->
@@ -228,6 +228,7 @@
   }
 
   .card {
+    position: relative;
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 0;
@@ -238,6 +239,27 @@
     transition: border-color .12s ease;
   }
   .card:hover { border-color: var(--ink); }
+  /* Source link — dimmed by default, full on card hover / focus */
+  .card-src {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    opacity: 0;
+    transition: opacity .12s ease, color .12s ease;
+  }
+  .card:hover .card-src,
+  .card-src:focus-visible { opacity: .55; }
+  .card-src:hover,
+  .card:hover .card-src:hover { opacity: 1; color: var(--ink); }
+  .card-src:focus-visible { outline: 1px solid var(--ink); outline-offset: 2px; }
+  /* Touch devices have no hover — keep the icon always visible there */
+  @media (hover: none) {
+    .card-src { opacity: .55; }
+  }
   .card-title {
     font-family: var(--mono);
     font-weight: 700;
@@ -245,6 +267,7 @@
     letter-spacing: .03em;
     text-transform: uppercase;
     margin: 0 0 8px;
+    padding-right: 22px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -321,6 +344,7 @@
   @media print {
     .page { max-width: 100%; padding: 24px; }
     .theme-toggle { display: none; }
+    .card-src { display: none; }
     .card, .foundation, .anchor { box-shadow: none; }
     .stage { break-inside: avoid; }
     .card { break-inside: avoid; }
@@ -370,16 +394,19 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Mint</h3>
+          <a class="card-src" href="https://teia.art/mint" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">create an OBJKT and set its metadata, editions, pricing, royalties, and license — including native text art like poems, essays, and ASCII</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Collaborations</h3>
+          <a class="card-src" href="https://teia.art/collaborate" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">create a work together and split the proceeds across several wallets by share</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">License at Mint</h3>
+          <a class="card-src" href="https://teia.art/mint" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">set the licensing terms as you create the work</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
@@ -396,21 +423,25 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Resale &amp; Royalties</h3>
-          <p class="card-body">artists receive royalties when their work is resold</p>
+          <a class="card-src" href="https://teia.art/faq" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          <p class="card-body">collectors resell collected works on the secondary market via swap; the original artist earns a royalty on each resale</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Copyright Registration</h3>
+          <a class="card-src" href="https://teia.art/copyright" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">register who made a work and attach an on-chain license to something you already minted</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Copyright Marketplace</h3>
+          <a class="card-src" href="https://teia.art/copyrightmarketplace" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">search for rights-registered works and license them for commercial use</p>
           <div class="roles"><span class="role collector">#collector</span><span class="role brand-role">#brand</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Distribution Deals <span class="soon">Soon</span></h3>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2086240205254930578" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">license works to earn from distribution and commercial deals</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role brand-role">#brand</span></div>
         </article>
@@ -427,21 +458,25 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Activity</h3>
+          <a class="card-src" href="https://teia.art/activity" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">follow mints, sales, listings, transfers, trades, and social activity</p>
           <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Feeds &amp; Discovery</h3>
+          <a class="card-src" href="https://teia.art/" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">find work through activity, friends, filters, and the community</p>
           <div class="roles"><span class="role collector">#collector</span><span class="role brand-role">#brand</span></div>
         </article>
         <article class="card">
-          <h3 class="card-title">Curation</h3>
+          <h3 class="card-title">Curation <span class="soon">Soon</span></h3>
+          <a class="card-src" href="https://preview.teia.art/curations/" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">build native, on-chain playlists, albums, and collections from your own and others' works — in any order, editable anytime</p>
           <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Curation Fees <span class="soon">Soon</span></h3>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2086913898620555487" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">curators set a commission on sales made on an artist's behalf, split on-chain between artist and curators by preset share rates</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role curator">#curator</span></div>
         </article>
@@ -458,21 +493,25 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Direct Messages</h3>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2066566621918089493" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">message other wallets directly through Teia</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Public &amp; Private Channels</h3>
+          <a class="card-src" href="https://teia.art/publicchannels" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">wallet-based group conversations and community channels</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Token-Gated Comments</h3>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2086240205254930578" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">discuss an NFT with the people who own it and its community</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Notifications</h3>
+          <a class="card-src" href="https://preview.teia.art/notifications" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">stay in the loop on activity around your work and collections</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
@@ -489,21 +528,25 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Community Wiki</h3>
+          <a class="card-src" href="https://preview.teia.art/wiki" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">docs and guides, maintained by the community</p>
           <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Community Calendar</h3>
+          <a class="card-src" href="https://teia.art/calendar" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">discover and propose exhibitions, events, and meetups</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Polls</h3>
+          <a class="card-src" href="https://teia.art/polls" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">non-binding feedback, feature requests, and a read on community sentiment</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">DAO Governance</h3>
+          <a class="card-src" href="https://teia.art/dao" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">$TEIA holders vote on binding proposals that shape the platform</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
