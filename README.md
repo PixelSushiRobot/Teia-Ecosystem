@@ -18,10 +18,13 @@ Each feature is tagged with the roles it serves — `#artist`, `#collector`, `#c
 
 ## Living reference
 
-The page is meant to be updated as features roll out, so it stays an accurate picture of what Teia can do.
+The page is meant to be updated as features roll out, so it stays an accurate picture of what Teia can do. Each feature card sits in one of three states, shown by its tag:
 
-- **`Soon` tag** — features not yet on the main app are marked `Soon` (currently Distribution Deals, Curation, and Curation Fees). When one ships, drop the `Soon` tag and repoint its source to the live route.
-- **Source links** — each card has a link icon (top-right, appears on hover) pointing to its source: a teia.art page where one exists, or a founder/dev post or preview link for features that haven't shipped yet.
+- **Live** (no tag) — available on the main app now. Source links to its teia.art page.
+- **`Preview`** — usable on `preview.teia.art` but not yet on main. Source links to the preview route. When it ships, drop the `Preview` tag and repoint the link from `preview.teia.art` to `teia.art`.
+- **`Soon`** — announced but not yet functional. Source links to a founder/dev post. When it ships, drop the `Soon` tag and repoint to the live route.
+
+Each card also has a **source link** — a link icon (top-right, appears on hover) pointing to its source: a teia.art page, a preview route, or a founder/dev post.
 
 ## Features
 
