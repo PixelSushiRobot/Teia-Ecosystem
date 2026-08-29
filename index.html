@@ -1,83 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teia, The Ecosystem Around an NFT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teia, The Ecosystem Around an NFT</title>
 
-  <!-- Primary meta -->
-  <meta name="description"
-    content="A map of everything that grows around a single NFT on teia.art — from minting and rights to discovery, connection, and community governance.">
-  <meta name="author" content="PixelSushiRobot">
-  <meta name="keywords" content="Teia, teia.art, NFT, Tezos, OBJKT, DAO, digital art, artists, collectors, curators">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f2f2f2" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0c0c0d" media="(prefers-color-scheme: dark)">
+<!-- Primary meta -->
+<meta name="description" content="A map of everything that grows around a single NFT on teia.art — from minting and rights to discovery, connection, and community governance.">
+<meta name="author" content="PixelSushiRobot">
+<meta name="keywords" content="Teia, teia.art, NFT, Tezos, OBJKT, DAO, digital art, artists, collectors, curators">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f2f2f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0c0d" media="(prefers-color-scheme: dark)">
 
-  <!-- Canonical — update to your Pages URL -->
-  <link rel="canonical" href="https://pixelsushirobot.github.io/Teia-Ecosystem/">
+<!-- Canonical — update to your Pages URL -->
+<link rel="canonical" href="https://pixelsushirobot.github.io/Teia-Ecosystem/">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Teia, The Ecosystem Around an NFT">
-  <meta property="og:description"
-    content="A map of everything that grows around a single NFT on teia.art — from minting and rights to discovery, connection, and community governance.">
-  <meta property="og:url" content="https://pixelsushirobot.github.io/Teia-Ecosystem/">
-  <meta property="og:site_name" content="Teia Ecosystem">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Teia, The Ecosystem Around an NFT">
+<meta property="og:description" content="A map of everything that grows around a single NFT on teia.art — from minting and rights to discovery, connection, and community governance.">
+<meta property="og:url" content="https://pixelsushirobot.github.io/Teia-Ecosystem/">
+<meta property="og:site_name" content="Teia Ecosystem">
 
-  <!-- Twitter / X card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Teia, The Ecosystem Around an NFT">
-  <meta name="twitter:description"
-    content="A map of everything that grows around a single NFT on teia.art — from minting and rights to discovery, connection, and community governance.">
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Teia, The Ecosystem Around an NFT">
+<meta name="twitter:description" content="A map of everything that grows around a single NFT on teia.art — from minting and rights to discovery, connection, and community governance.">
 
-  <!-- 1. The Main Icon (Covers 95%+ of modern desktop browsers) -->
-  <link rel="icon" type="image/svg+xml" href="icon.svg">
+<style>
+  /* Light theme (default) */
+  :root,
+  :root[data-theme="light"] {
+    --bg: #f2f2f2;
+    --ink: #0a0a0a;
+    --muted: #6b6b6b;
+    --line: #d9d9d9;
+    --card: #ffffff;
+    --accent: #0a0a0a;
+    --accent-soft: #ededed;
+    --soon: #0a0a0a;
+    --soon-soft: #e6e6e6;
+    --diamond: #0a0a0a;
+    --shadow: none;
+    --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, "Roboto Mono", Consolas, monospace;
 
-  <!-- 2. The Google Search & Legacy Fallback (Always include exactly one PNG) -->
-  <link rel="icon" type="image/png" sizes="48x48" href="icon-48.png">
+    /* Role tag palette — Reasonable Colors (shade-1 bg / shade-4 text) */
+    --artist-bg: #f0f4ff;     --artist-ink: #006dca;    /* blue */
+    --collector-bg: #e0ffd9;  --collector-ink: #008217; /* green */
+    --curator-bg: #f7f1ff;    --curator-ink: #794aff;   /* violet */
+    --brand-bg: #fff7fb;      --brand-ink: #d2008f;     /* pink */
+  }
 
-  <!-- 3. Apple Home Screen Icon (iOS still prefers a static PNG) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  /* Dark theme */
+  :root[data-theme="dark"] {
+    --bg: #0c0c0d;
+    --ink: #ececef;
+    --muted: #8b8b92;
+    --line: #2a2a2e;
+    --card: #141416;
+    --accent: #ececef;
+    --accent-soft: #1e1e22;
+    --soon: #ececef;
+    --soon-soft: #26262b;
+    --diamond: #ececef;
+    --shadow: none;
 
-  <!-- 4. Android & PWA Manifest -->
-  <link rel="manifest" href="site.webmanifest">
+    /* Role tag palette — Reasonable Colors (shade-6 bg / shade-3 text) for dark */
+    --artist-bg: #001a39;     --artist-ink: #0089fc;    /* blue */
+    --collector-bg: #062800;  --collector-ink: #00a21f; /* green */
+    --curator-bg: #0b0074;    --curator-ink: #9b70ff;   /* violet */
+    --brand-bg: #4b0030;      --brand-ink: #ff2fb2;     /* pink */
+  }
 
-  <style>
-    /* Light theme (default) */
-    :root,
-    :root[data-theme="light"] {
-      --bg: #f2f2f2;
-      --ink: #0a0a0a;
-      --muted: #6b6b6b;
-      --line: #d9d9d9;
-      --card: #ffffff;
-      --accent: #0a0a0a;
-      --accent-soft: #ededed;
-      --soon: #0a0a0a;
-      --soon-soft: #e6e6e6;
-      --diamond: #0a0a0a;
-      --shadow: none;
-      --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, "Roboto Mono", Consolas, monospace;
-
-      /* Role tag palette — Reasonable Colors (shade-1 bg / shade-4 text) */
-      --artist-bg: #f0f4ff;
-      --artist-ink: #006dca;
-      /* blue */
-      --collector-bg: #e0ffd9;
-      --collector-ink: #008217;
-      /* green */
-      --curator-bg: #f7f1ff;
-      --curator-ink: #794aff;
-      /* violet */
-      --brand-bg: #fff7fb;
-      --brand-ink: #d2008f;
-      /* pink */
-    }
-
-    /* Dark theme */
-    :root[data-theme="dark"] {
+  /* System default: follow OS when no explicit theme is chosen */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
       --bg: #0c0c0d;
       --ink: #ececef;
       --muted: #8b8b92;
@@ -90,425 +88,282 @@
       --diamond: #ececef;
       --shadow: none;
 
-      /* Role tag palette — Reasonable Colors (shade-6 bg / shade-3 text) for dark */
-      --artist-bg: #001a39;
-      --artist-ink: #0089fc;
-      /* blue */
-      --collector-bg: #062800;
-      --collector-ink: #00a21f;
-      /* green */
-      --curator-bg: #0b0074;
-      --curator-ink: #9b70ff;
-      /* violet */
-      --brand-bg: #4b0030;
-      --brand-ink: #ff2fb2;
-      /* pink */
+      --artist-bg: #001a39;     --artist-ink: #0089fc;
+      --collector-bg: #062800;  --collector-ink: #00a21f;
+      --curator-bg: #0b0074;    --curator-ink: #9b70ff;
+      --brand-bg: #4b0030;      --brand-ink: #ff2fb2;
     }
+  }
 
-    /* System default: follow OS when no explicit theme is chosen */
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme]) {
-        --bg: #0c0c0d;
-        --ink: #ececef;
-        --muted: #8b8b92;
-        --line: #2a2a2e;
-        --card: #141416;
-        --accent: #ececef;
-        --accent-soft: #1e1e22;
-        --soon: #ececef;
-        --soon-soft: #26262b;
-        --diamond: #ececef;
-        --shadow: none;
+  * { box-sizing: border-box; text-wrap: pretty; }
 
-        --artist-bg: #001a39;
-        --artist-ink: #0089fc;
-        --collector-bg: #062800;
-        --collector-ink: #00a21f;
-        --curator-bg: #0b0074;
-        --curator-ink: #9b70ff;
-        --brand-bg: #4b0030;
-        --brand-ink: #ff2fb2;
-      }
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--mono);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    transition: background-color .2s ease, color .2s ease;
+  }
 
-    * {
-      box-sizing: border-box;
-      text-wrap: pretty;
-    }
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--mono);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
-      transition: background-color .2s ease, color .2s ease;
-    }
+  /* --- Framing header --- */
+  .framing {
+    margin-bottom: 20px;
+  }
+  .framing-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .theme-toggle {
+    display: flex;
+    border: 1px solid var(--ink);
+    flex: none;
+    margin-top: 4px;
+  }
+  .th-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background-color .12s ease, color .12s ease;
+  }
+  .th-btn + .th-btn {
+    border-left: 1px solid var(--ink);
+  }
+  .th-btn:hover {
+    color: var(--ink);
+  }
+  .th-btn.on {
+    background: var(--accent);
+    color: var(--card);
+  }
+  .brand {
+    font-family: var(--mono);
+    font-weight: 700;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .brand-sub {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .02em;
+    color: var(--muted);
+    margin-top: 12px;
+    max-width: 46ch;
+  }
+  .anchor {
+    display: block;
+    margin-top: 22px;
+    padding: 12px 14px;
+    border: 1px solid var(--ink);
+    background: var(--card);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .01em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .anchor b { color: var(--ink); font-weight: 700; }
+  .anchor .glyph { margin-right: 8px; color: var(--ink); }
 
-    .page {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 48px 20px 80px;
-    }
+  /* --- Stages --- */
+  .stage { margin-top: 32px; }
+  .stage-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .stage-num {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+  .stage-title {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--ink);
+  }
+  .stage-desc {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin-left: auto;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    white-space: nowrap;
+    max-width: 60%;
+  }
 
-    /* --- Framing header --- */
-    .framing {
-      margin-bottom: 20px;
-    }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
 
-    .framing-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 20px;
-    }
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    padding: 15px 15px 14px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: border-color .12s ease;
+  }
+  .card:hover { border-color: var(--ink); }
+  /* Source link — dimmed by default, full on card hover / focus */
+  .card-src {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    opacity: 0;
+    transition: opacity .12s ease, color .12s ease;
+  }
+  .card:hover .card-src,
+  .card-src:focus-visible { opacity: .55; }
+  .card-src:hover,
+  .card:hover .card-src:hover { opacity: 1; color: var(--ink); }
+  .card-src:focus-visible { outline: 1px solid var(--ink); outline-offset: 2px; }
+  /* Touch devices have no hover — keep the icon always visible there */
+  @media (hover: none) {
+    .card-src { opacity: .55; }
+  }
+  .card-title {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    padding-right: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    color: var(--ink);
+  }
+  .soon {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--soon);
+    background: var(--soon-soft);
+    border-radius: 0;
+    padding: 2px 6px;
+  }
+  .preview {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--soon);
+    background: transparent;
+    border: 1px solid var(--soon-soft);
+    border-radius: 0;
+    padding: 1px 5px;
+  }
+  .card-body {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 12px;
+    line-height: 1.5;
+    text-transform: none;
+  }
+  .roles {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .role {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .01em;
+    color: var(--ink);
+    background: var(--accent-soft);
+    border-radius: 0;
+    padding: 3px 8px;
+  }
+  .role.artist    { background: var(--artist-bg);    color: var(--artist-ink); }
+  .role.collector { background: var(--collector-bg); color: var(--collector-ink); }
+  .role.curator   { background: var(--curator-bg);   color: var(--curator-ink); }
+  .role.brand-role { background: var(--brand-bg);     color: var(--brand-ink); }
 
-    .theme-toggle {
-      display: flex;
-      border: 1px solid var(--ink);
-      flex: none;
-      margin-top: 4px;
-    }
+  .foundation {
+    margin-top: 44px;
+    padding: 16px 16px;
+    border: 1px solid var(--ink);
+    background: var(--card);
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .foundation b { color: var(--ink); font-weight: 700; }
+  .foundation .fh {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 10px;
+  }
 
-    .th-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 28px;
-      padding: 0;
-      border: none;
-      background: transparent;
-      color: var(--muted);
-      cursor: pointer;
-      transition: background-color .12s ease, color .12s ease;
-    }
+  @media (max-width: 620px) {
+    .cards { grid-template-columns: 1fr; }
+    .stage-desc { max-width: 100%; text-align: left; margin-left: 0; white-space: normal; }
+    .stage-head { flex-direction: column; gap: 4px; }
+  }
 
-    .th-btn+.th-btn {
-      border-left: 1px solid var(--ink);
-    }
-
-    .th-btn:hover {
-      color: var(--ink);
-    }
-
-    .th-btn.on {
-      background: var(--accent);
-      color: var(--card);
-    }
-
-    .brand {
-      font-family: var(--mono);
-      font-weight: 700;
-      letter-spacing: -.02em;
-      text-transform: uppercase;
-      font-size: 40px;
-      line-height: 1;
-      color: var(--ink);
-    }
-
-    .brand-sub {
-      font-family: var(--mono);
-      font-size: 13px;
-      letter-spacing: .02em;
-      color: var(--muted);
-      margin-top: 12px;
-      max-width: 46ch;
-    }
-
-    .anchor {
-      display: block;
-      margin-top: 22px;
-      padding: 12px 14px;
-      border: 1px solid var(--ink);
-      background: var(--card);
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: .01em;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
-
-    .anchor b {
-      color: var(--ink);
-      font-weight: 700;
-    }
-
-    .anchor .glyph {
-      margin-right: 8px;
-      color: var(--ink);
-    }
-
-    /* --- Stages --- */
-    .stage {
-      margin-top: 32px;
-    }
-
-    .stage-head {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .stage-num {
-      font-family: var(--mono);
-      font-weight: 700;
-      font-size: 15px;
-      color: var(--ink);
-      letter-spacing: 0;
-    }
-
-    .stage-title {
-      font-family: var(--mono);
-      font-weight: 700;
-      font-size: 15px;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      margin: 0;
-      color: var(--ink);
-    }
-
-    .stage-desc {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      margin-left: auto;
-      text-align: right;
-      text-transform: uppercase;
-      letter-spacing: .01em;
-      white-space: nowrap;
-      max-width: 60%;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .card {
-      position: relative;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 0;
-      padding: 15px 15px 14px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      transition: border-color .12s ease;
-    }
-
-    .card:hover {
-      border-color: var(--ink);
-    }
-
-    /* Source link — dimmed by default, full on card hover / focus */
-    .card-src {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      opacity: 0;
-      transition: opacity .12s ease, color .12s ease;
-    }
-
-    .card:hover .card-src,
-    .card-src:focus-visible {
-      opacity: .55;
-    }
-
-    .card-src:hover,
-    .card:hover .card-src:hover {
-      opacity: 1;
-      color: var(--ink);
-    }
-
-    .card-src:focus-visible {
-      outline: 1px solid var(--ink);
-      outline-offset: 2px;
-    }
-
-    /* Touch devices have no hover — keep the icon always visible there */
-    @media (hover: none) {
-      .card-src {
-        opacity: .55;
-      }
-    }
-
-    .card-title {
-      font-family: var(--mono);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: .03em;
-      text-transform: uppercase;
-      margin: 0 0 8px;
-      padding-right: 22px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      color: var(--ink);
-    }
-
-    .soon {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--soon);
-      background: var(--soon-soft);
-      border-radius: 0;
-      padding: 2px 6px;
-    }
-
-    .preview {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--soon);
-      background: transparent;
-      border: 1px solid var(--soon-soft);
-      border-radius: 0;
-      padding: 1px 5px;
-    }
-
-    .card-body {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0 0 12px;
-      line-height: 1.5;
-      text-transform: none;
-    }
-
-    .roles {
-      margin-top: auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .role {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .01em;
-      color: var(--ink);
-      background: var(--accent-soft);
-      border-radius: 0;
-      padding: 3px 8px;
-    }
-
-    .role.artist {
-      background: var(--artist-bg);
-      color: var(--artist-ink);
-    }
-
-    .role.collector {
-      background: var(--collector-bg);
-      color: var(--collector-ink);
-    }
-
-    .role.curator {
-      background: var(--curator-bg);
-      color: var(--curator-ink);
-    }
-
-    .role.brand-role {
-      background: var(--brand-bg);
-      color: var(--brand-ink);
-    }
-
-    .foundation {
-      margin-top: 44px;
-      padding: 16px 16px;
-      border: 1px solid var(--ink);
-      background: var(--card);
-      font-family: var(--mono);
-      font-size: 12px;
-      line-height: 1.6;
-      color: var(--muted);
-    }
-
-    .foundation b {
-      color: var(--ink);
-      font-weight: 700;
-    }
-
-    .foundation .fh {
-      font-family: var(--mono);
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--ink);
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 620px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .stage-desc {
-        max-width: 100%;
-        text-align: left;
-        margin-left: 0;
-        white-space: normal;
-      }
-
-      .stage-head {
-        flex-direction: column;
-        gap: 4px;
-      }
-    }
-
-    @media print {
-      .page {
-        max-width: 100%;
-        padding: 24px;
-      }
-
-      .theme-toggle {
-        display: none;
-      }
-
-      .card-src {
-        display: none;
-      }
-
-      .card,
-      .foundation,
-      .anchor {
-        box-shadow: none;
-      }
-
-      .stage {
-        break-inside: avoid;
-      }
-
-      .card {
-        break-inside: avoid;
-      }
-
-      * {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-    }
-  </style>
+  @media print {
+    .page { max-width: 100%; padding: 24px; }
+    .theme-toggle { display: none; }
+    .card-src { display: none; }
+    .card, .foundation, .anchor { box-shadow: none; }
+    .stage { break-inside: avoid; }
+    .card { break-inside: avoid; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
 </head>
-
 <body>
   <main class="page">
 
@@ -520,22 +375,18 @@
         </div>
         <div class="theme-toggle" id="themeToggle" role="group" aria-label="Color theme">
           <button class="th-btn" data-theme-choice="light" title="Light" aria-label="Light theme">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"
-              stroke-linecap="round">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
               <circle cx="12" cy="12" r="4" />
-              <path
-                d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" />
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" />
             </svg>
           </button>
           <button class="th-btn" data-theme-choice="dark" title="Dark" aria-label="Dark theme">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"
-              stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
             </svg>
           </button>
           <button class="th-btn on" data-theme-choice="system" title="Follow system" aria-label="System theme">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"
-              stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="4" width="18" height="12" rx="1.5" />
               <path d="M8 20h8M12 16v4" />
             </svg>
@@ -555,35 +406,19 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Mint</h3>
-          <a class="card-src" href="https://teia.art/mint" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
-          <p class="card-body">create an OBJKT and set its metadata, editions, pricing, royalties, and license —
-            including native text art like poems, essays, and ASCII</p>
+          <a class="card-src" href="https://teia.art/mint" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          <p class="card-body">create an OBJKT and set its metadata, editions, pricing, royalties, and license — including native text art like poems, essays, and ASCII</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Collaborations</h3>
-          <a class="card-src" href="https://teia.art/collaborate" target="_blank" rel="noopener noreferrer"
-            title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/collaborate" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">create a work together and split the proceeds across several wallets by share</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">License at Mint</h3>
-          <a class="card-src" href="https://teia.art/mint" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/mint" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">set the licensing terms as you create the work</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
@@ -600,50 +435,25 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Resale &amp; Royalties</h3>
-          <a class="card-src" href="https://teia.art/faq" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
-          <p class="card-body">collectors resell collected works on the secondary market via swap; the original artist
-            earns a royalty on each resale</p>
-          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span>
-          </div>
+          <a class="card-src" href="https://teia.art/faq" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          <p class="card-body">collectors resell collected works on the secondary market via swap; the original artist earns a royalty on each resale</p>
+          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Copyright Registration</h3>
-          <a class="card-src" href="https://teia.art/copyright" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
-          <p class="card-body">register who made a work and attach an on-chain license to something you already minted
-          </p>
+          <a class="card-src" href="https://teia.art/copyright" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          <p class="card-body">register who made a work and attach an on-chain license to something you already minted</p>
           <div class="roles"><span class="role artist">#artist</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Copyright Marketplace</h3>
-          <a class="card-src" href="https://teia.art/copyrightmarketplace" target="_blank" rel="noopener noreferrer"
-            title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/copyrightmarketplace" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">search for rights-registered works and license them for commercial use</p>
-          <div class="roles"><span class="role collector">#collector</span><span class="role brand-role">#brand</span>
-          </div>
+          <div class="roles"><span class="role collector">#collector</span><span class="role brand-role">#brand</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Distribution Deals <span class="soon">Soon</span></h3>
-          <a class="card-src" href="https://x.com/ryangtanaka/status/2086240205254930578" target="_blank"
-            rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13"
-              height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2086240205254930578" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">license works to earn from distribution and commercial deals</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role brand-role">#brand</span></div>
         </article>
@@ -660,64 +470,32 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Activity</h3>
-          <a class="card-src" href="https://teia.art/activity" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/activity" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">follow mints, sales, listings, transfers, trades, and social activity</p>
-          <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span>
-          </div>
+          <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Feeds &amp; Discovery</h3>
-          <a class="card-src" href="https://teia.art/" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">find work through activity, friends, filters, and the community</p>
-          <div class="roles"><span class="role collector">#collector</span><span class="role brand-role">#brand</span>
-          </div>
+          <div class="roles"><span class="role collector">#collector</span><span class="role brand-role">#brand</span></div>
         </article>
         <article class="card">
-          <h3 class="card-title">Curation <span class="preview">Preview</span></h3>
-          <a class="card-src" href="https://preview.teia.art/curations/" target="_blank" rel="noopener noreferrer"
-            title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
-          <p class="card-body">build native, on-chain playlists, albums, and collections from your own and others' works
-            — in any order, editable anytime</p>
-          <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span>
-          </div>
+          <h3 class="card-title">Curation</h3>
+          <a class="card-src" href="https://teia.art/curations" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          <p class="card-body">build native, on-chain playlists, albums, and collections from your own and others' works — in any order, editable anytime</p>
+          <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
-          <h3 class="card-title">Audio Playlists <span class="preview">Preview</span></h3>
-          <a class="card-src" href="https://preview.teia.art/curations/9" target="_blank" rel="noopener noreferrer"
-            title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
-          <p class="card-body">add audio works to a curation and it plays as a mini radio station — a place for
-            musicians to release albums on-chain</p>
+          <h3 class="card-title">Audio Playlists</h3>
+          <a class="card-src" href="https://teia.art/curations/5" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          <p class="card-body">add audio works to a curation and it plays as a mini radio station — a place for musicians to release albums on-chain</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
-          <h3 class="card-title">Curation Fees <span class="soon">Soon</span></h3>
-          <a class="card-src" href="https://x.com/ryangtanaka/status/2086913898620555487" target="_blank"
-            rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13"
-              height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
-          <p class="card-body">curators set their own markup with no upper limit, earned on top of the artist's cut
-            rather than taken from it, split on-chain</p>
+          <h3 class="card-title">Curation Fees</h3>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2093748543991513511" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
+          <p class="card-body">curators set their own markup with no upper limit, earned on top of the artist's cut rather than taken from it, split on-chain</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role curator">#curator</span></div>
         </article>
       </div>
@@ -733,53 +511,27 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Direct Messages</h3>
-          <a class="card-src" href="https://x.com/ryangtanaka/status/2066566621918089493" target="_blank"
-            rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13"
-              height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2066566621918089493" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">message other wallets directly through Teia</p>
-          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span>
-          </div>
+          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Public &amp; Private Channels</h3>
-          <a class="card-src" href="https://teia.art/publicchannels" target="_blank" rel="noopener noreferrer"
-            title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/publicchannels" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">wallet-based group conversations and community channels</p>
-          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span><span
-              class="role curator">#curator</span></div>
+          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Token-Gated Comments</h3>
-          <a class="card-src" href="https://x.com/ryangtanaka/status/2086240205254930578" target="_blank"
-            rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13"
-              height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://x.com/ryangtanaka/status/2086240205254930578" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">discuss an NFT with the people who own it and its community</p>
-          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span>
-          </div>
+          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Notifications</h3>
-          <a class="card-src" href="https://teia.art/notifications" target="_blank" rel="noopener noreferrer"
-            title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/notifications" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">stay in the loop on activity around your work and collections</p>
-          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span>
-          </div>
+          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
       </div>
     </section>
@@ -794,59 +546,34 @@
       <div class="cards">
         <article class="card">
           <h3 class="card-title">Community Wiki</h3>
-          <a class="card-src" href="https://teia.art/wiki" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/wiki" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">docs and guides, maintained by the community</p>
-          <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span>
-          </div>
+          <div class="roles"><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Community Calendar</h3>
-          <a class="card-src" href="https://teia.art/calendar" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/calendar" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">discover and propose exhibitions, events, and meetups</p>
           <div class="roles"><span class="role artist">#artist</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">Polls</h3>
-          <a class="card-src" href="https://teia.art/polls" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/polls" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">non-binding feedback, feature requests, and a read on community sentiment</p>
-          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span><span
-              class="role curator">#curator</span></div>
+          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span><span class="role curator">#curator</span></div>
         </article>
         <article class="card">
           <h3 class="card-title">DAO Governance</h3>
-          <a class="card-src" href="https://teia.art/dao" target="_blank" rel="noopener noreferrer" title="Source"
-            aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg></a>
+          <a class="card-src" href="https://teia.art/dao" target="_blank" rel="noopener noreferrer" title="Source" aria-label="View source"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>
           <p class="card-body">$TEIA holders vote on binding proposals that shape the platform</p>
-          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span>
-          </div>
+          <div class="roles"><span class="role artist">#artist</span><span class="role collector">#collector</span></div>
         </article>
       </div>
     </section>
 
     <section class="foundation">
       <span class="fh">Foundation</span>
-      <b>Built on Tezos</b> · a <b>2.5% trade fee</b> plus <b>direct donations</b> fund the DAO treasury →
-      infrastructure · exhibitions · education. The community owns &amp; governs the platform, and a volunteer
-      moderation team protects it against copyminting &amp; abuse.
+      <b>Built on Tezos</b> · a <b>2.5% trade fee</b> plus <b>direct donations</b> fund the DAO treasury → infrastructure · exhibitions · education. The community owns &amp; governs the platform, and a volunteer moderation team protects it against copyminting &amp; abuse.
     </section>
 
   </main>
@@ -875,5 +602,4 @@
     })();
   </script>
 </body>
-
 </html>
